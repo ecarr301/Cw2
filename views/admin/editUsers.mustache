@@ -1,0 +1,18 @@
+
+
+<html>
+<head>
+    {{>header}}
+</head>
+<h2>Manage Users</h2>
+<ul>
+    {{#users}}
+    <li>{{name}}  {{role}} - <a href="/admin/users/update/{{name}}">Edit</a> | 
+    <form action="/admin/users/delete/{{name}}" method="post" style="display: inline;">
+            <button type="submit" onclick="return confirm('Are you sure you want to delete this user?');">Delete</button>
+        </form>
+        </li>
+    {{/users}}
+</ul>
+<a href="/admin/users/create">Create New User</a>
+</html>

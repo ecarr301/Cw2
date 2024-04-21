@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <title>{{title}}</title>
+ <div class="text-left">
+       <a href="/about" class="btn btn-primary">About Us</a>
+       <a href="/contactUs" class="btn btn-primary">Contact Us</a>
+{{#isUser}}
+      <a href="/newItem" class="btn btn-primary">Add Item</a>
+{{/isUser}}
+{{#isPantry}}
+<a href="/allItems" class="btn btn-primary">
+View Items
+</a>
+{{/isPantry}}
+{{#isAdmin}}
+<a href="/adminDashboard" class="btn btn-primary">
+Admin Dashboard
+</a>
+{{/isAdmin}}
+</div>
+<div class="text-right" style="margin-bottom: 1em;">
+  {{#user}}
+    <a href="/logout" class="btn btn-primary">Logout</a>
+  {{/user}}
+  {{^user}}
+    <a id="login" href="/login" class="btn btn-primary">Sign in</a>
+    <a id="register" href="/register" class="btn btn-primary">Register</a>
+  {{/user}}
+</div>

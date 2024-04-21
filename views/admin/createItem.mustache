@@ -1,0 +1,33 @@
+<html>
+<head>
+{{>header}}
+</head>
+<body class="container">
+<h2>Post an item</h2>
+<form method="post" role="form" action="/newItem">
+<div class="form-group">
+<label for="userId">Name</label>
+<input type="text" class="form-control" id="userId" name="userId"
+placeholder="Added by" required>
+</div>
+<div class="form-group">
+<label for="food">Food</label>
+<input type="text" class="form-control" id="food" name="food"
+placeholder="Enter the item name" >
+</div>
+<div class="form-group">
+<label for="quantity">Quantity</label>
+<textarea class="form-control" id="quantity" name="quantity"
+placeholder="Quantity" rows="3" >
+</textarea>
+</div>
+<div class="form-group">
+<label for="expiry">Expiry Date</label>
+<input type="date" class="form-control" id="expiry" name="expiry" >
+</div>
+<div class="form-group">
+<input type="submit" value="Post entry" class="btn btn-primary">
+</div>
+</form>
+</body>
+</html>

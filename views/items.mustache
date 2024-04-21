@@ -1,0 +1,27 @@
+<html>
+<head>
+{{>header}}
+</head>
+<body>
+<h1>{{title}}</h1>
+{{#items}}
+<div>
+<h4>{{food}}</h4>
+<p>
+{{quantity}}
+</p>
+<div>
+{{expiry}}
+<div>
+<form action="/selectItem/{{food}}" method="post">
+        <button type="submit" class="btn btn-primary">Select</button>
+    </form>
+</div>
+<hr>
+
+{{/items}}
+{{^items}}
+No items Available
+{{/items}}
+</body>
+</html>

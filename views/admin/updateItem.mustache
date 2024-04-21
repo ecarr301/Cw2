@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+    {{>header}}
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Item</h1>
+        <form action="/admin/items/update/{{item.food}}" method="post">
+            <div class="form-group">
+                <label for="food">Food:</label>
+                <input type="text" class="form-control" id="food" name="food" value="{{item.food}}" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="text" class="form-control" id="quantity" name="quantity" value="{{item.quantity}}" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry Date:</label>
+                <input type="date" class="form-control" id="expiry" name="expiry" value="{{item.expiry}}">
+            </div>
+            <button type="submit" class="btn btn-primary">Update Item</button>
+        </form>
+    </div>
+</body>
+</html>
+
